@@ -1,0 +1,215 @@
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #60424c;
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+}
+h2 {
+    position: absolute;
+    top: 0;
+    left: 45px;
+    width: 210px;
+    height: 50px;
+    margin: 20px 0 0 0;
+    font-size: 10px;
+    text-align: center;
+}
+.d3-tip, .d3-tip2 {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.d3-tip:after, .d3-tip2:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    pointer-events: none;
+}
+.d3-tip.n:after {
+    content: "\25BC";
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+    text-align: center;
+}
+.d3-tip.w:after, .d3-tip2.e:after {
+    content: "\25C0";
+    margin: -4px 0 0 0;
+    top: 50%;
+    left: -50%;
+}
+.d3-tip, .d3-tip2 {
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: center;
+}
+.accident-age {
+    font-size: 10px;
+}
+.label, .vehicle-label {
+    font-size: 12px;
+}
+.label {
+    fill: black;
+    cursor: default;
+}
+.label-bar {
+    font-size: 11px;
+    text-anchor: middle;
+}
+.label-pointer {
+    cursor: pointer;
+}
+.region-num, .vehicle-num {
+    text-anchor: end;
+}
+.region-label {
+    text-anchor: start;
+    font-weight: bold;
+}
+.rect-selected, .rect-hover {
+    stroke: #05ffa7;
+    stroke-width: 1px;
+}
+.tick line {
+    stroke: grey;
+}
+.domain {
+    stroke: transparent;
+}
+.wrapper {
+    background-color: rgba(252, 248, 243, 0.9);
+    position: absolute;
+    border-radius: 20px;
+}
+.wrapper-heading {
+    top: 10px;
+    right: 0;
+    padding: 0 30px;
+}
+#wrapper-body {
+    width: 300px;
+    top: 10px;
+    bottom: 5px;
+    left: 0;
+    padding: 10px 15px 0 0;
+}
+#about {
+    top: 130px;
+    right: 0;
+    padding: 15px 30px 33px 30px;
+    font-size: 14px;
+    width: 600px;
+}
+.about-text {
+    line-height: 1.2rem;
+    font-weight: 600;
+}
+#toggle-about {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#about-title {
+    position: absolute;
+    top: 130px;
+    right: -500px;
+    padding: 5px 30px 5px 10px;
+    font-size: 11px;
+    cursor: pointer;
+}
+.label-brown {
+    color: #60424c;
+    fill: #60424c;
+}
+.casualties-map, .casualties-map svg {
+    position: absolute;
+}
+.casualties-map svg {
+    width: 60px;
+    height: 20px;
+    padding-right: 100px;
+    font: 10px sans-serif;
+}
+.option-severity:hover {
+    stroke: '#05ffa7';
+    stroke-width: 2px;
+}
+.option-severity:hover, .rect-hover, .icon-bar:hover, .label-bar:hover, #toggle-about:hover {
+    cursor: pointer;
+}
+.authors {
+    font-size: 9px;
+    color: white;
+    top: 95px;
+    right: 0;
+    padding: 5px 30px 5px 10px;
+}
+.link {
+    color: #05ffa7;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+#vis-accident {
+    position: absolute;
+    right: -500px;
+    top: 170px;
+    background-color: rgba(252, 248, 243, 0.9);
+    border-radius: 20px;
+}
+
+#vis-table text {
+    fill:black;
+}
+#main-wrapper {
+    width: 600px;
+    margin: 10px auto;
+}
+
+.centered {
+	text-align: center;
+}
+
+text {
+    color: black;
+    fill:black;
+}
+
+.desc {
+    font-family: "Mercury SSm A", "Mercury SSm B";
+    font-style: italic;
+    font-weight: 400;
+	font-size: 1.0em;
+	line-height: 1.2em;
+	width: 600px;
+	margin: 0 auto 20px auto;
+}
+
+.info {
+    width: 900px;
+    font-size: 12px;
+    margin-top: -10px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+
