@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+    
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='icon' type='image/x-icon' href='icons/favicon.ico' />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Visualizing Victoria Accident Data</title>
+  </head>
+  <body>
+    <div id='map'></div>
+    <div class='heading'>
+      <div class='wrapper-heading wrapper'>
+        <h1>Victoria Car Accident Data Visualization</h1>
+          <p class="info centered">This visualisation contains information of car accidents happened in Victoria in 2018. You can play around with the filters including severity and region names. Additionally, you can also check the information about each accident.</p>
+      </div>
+      <span id='about-title' class='wrapper'>
+        « When Fatal Crashes Happened
+      </span>
+      <div id='about' class='wrapper'>
+        <span id='toggle-about' class='label-brown'>
+          ✖
+        </span>
+        <div class='about-content'>
+          <div class='about-text'>
+            <div id='vis-table'>
+      <div id="main-wrapper">
+        <h1>When Fatal Crashes Happened</h1>
+        <div class="desc centered">
+            Each cell represents the percentage of fatal crashes involving the selected factor, occurring during the given month and time in 2018.
+        </div>
+        <button onclick="updateData('./data/ALL-NO.csv')" ><font color="#a64942">All Region</font> - Alcohol :<font color="#a64942">NO</font></button>
+        <button onclick="updateData('./data/ALL-YES.csv')"><font color="#a64942">All Region</font> - Alcohol :<font color="#a64942">YES</font></button>
+        <button onclick="updateData('./data/COUNTRY-NO.csv')"><font color="#a64942">COUNTRY Region</font> - Alcohol :<font color="#a64942">NO</font></button>
+        <button onclick="updateData('./data/COUNTRY-YES.csv')"><font color="#a64942">COUNTRY Region</font> - Alcohol :<font color="#a64942">YES</font></button>
+        <button onclick="updateData('./data/METRO-NO.csv')"><font color="#a64942">METRO Region</font> - Alcohol :<font color="#a64942">NO</font></button>
+        <button onclick="updateData('./data/METRO-YES.csv')"><font color="#a64942">METRO Region</font> - Alcohol :<font color="#a64942">YES</font></button>    
+        <div ref="heatmap" id='heatmap'></div>
+      </div>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='wrapper-body' class='wrapper'>
+      <div id='options-severity'></div>
+      <div id='vis-speeds'></div>
+      <div id='vis-regions'></div>
+    </div>
+
+    <div id='vis-accident'>
+      <h2 class='accident-location'></h2>
+    </div>
+      
+    
+        <script src='https://maps.google.com/maps/api/js?key=AIzaSyBIe3iBicUUc2gB1RuvHCcL5YkdLC4jnyA'></script>
+        <script src='https://d3js.org/d3.v4.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js'></script>
+        <script src='vis-accident-stats.js'></script>
+
+    </body>
+</html>
